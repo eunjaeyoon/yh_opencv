@@ -15,9 +15,13 @@ scaleY = 0.6
 scaleDown = cv2.resize(source,None,fx = scaleX, fy = scaleY, interpolation=cv2.INTER_LINEAR )
 
 print(scaleDown)
-
+cv2.imshow('Original', source)
 cv2.imshow('scaled Down',scaleDown)
 
+#CROP 이미지 자르기!
+crop_img = source[10:200,150:250]
+
+cv2.imshow('crop_img',crop_img)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
